@@ -96,13 +96,13 @@ class LRFinder(Callback):
         
     def plot_avg_loss(self):
         '''Helper function to quickly observe the learning rate experiment results.'''
-        plt.plot(self.history['lr'], self.history['avg_loss'])
+        plt.plot(self.history['lr'][10:-5], self.history['avg_loss'][10:-5])
         plt.xscale('log')
         plt.xlabel('Learning rate')
         plt.ylabel('Avg Loss')
     def plot_loss(self):
         '''Helper function to quickly observe the learning rate experiment results.'''
-        plt.plot(self.history['lr'], self.history['loss'])
+        plt.plot(self.history['lr'][10:-5], self.history['loss'][10:-5])
         plt.xscale('log')
         plt.xlabel('Learning rate')
         plt.ylabel('Loss')    
